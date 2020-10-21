@@ -9,4 +9,6 @@
 
 class LinkedList:
 
+    value = None
+
     pass
