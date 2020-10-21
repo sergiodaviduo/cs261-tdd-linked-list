@@ -23,4 +23,7 @@ class LinkedList:
         else:
             return False
 
+    def is_empty(self):
+        return True
+
     pass
