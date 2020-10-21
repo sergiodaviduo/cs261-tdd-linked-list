@@ -9,7 +9,16 @@
 
 class LinkedList:
 
+    addr = None
+
     def __init__(self, value=None):
         self.value = value
+        self.addr = self
+        self.next = self
+        self.prev = self
+
+    def is_sentinel(self):
+        if(self.value == None):
+            return True
 
     pass
