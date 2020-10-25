@@ -30,11 +30,15 @@ class LinkedList:
             return True
 
     def is_last(self):
-        if self.is_empty() == True:
+        if self.is_empty():
             return True
 
     def last(self):
         if self.is_empty():
             return self;
+
+    def append(self, appended):
+        if self.is_empty():
+            self.next = appended
 
     pass
