@@ -33,6 +33,8 @@ class LinkedList:
         if self.is_empty() == True:
             return True
 
-    #def
+    def last(self):
+        if self.is_empty():
+            return self;
 
     pass
