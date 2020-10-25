@@ -24,6 +24,15 @@ class LinkedList:
             return False
 
     def is_empty(self):
-        return True
+        if self.addr != self or self.next != self or self.prev != self:
+            return False
+        else:
+            return True
+
+    def is_last(self):
+        if self.is_empty() == True:
+            return True
+
+    #def
 
     pass
