@@ -40,6 +40,7 @@ class LinkedList:
     def last(self):
         if self.is_empty():
             return self;
+        return self.prev
 
     def append(self, appended):
         print("appending")
@@ -50,5 +51,6 @@ class LinkedList:
             appended.prev = self
             appended.next = self
             self.value = appended
+
 
     pass
