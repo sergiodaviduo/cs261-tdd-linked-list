@@ -46,6 +46,7 @@ class LinkedList:
             self.next = appended
             self.prev = appended
             appended.prev = self
+            appended.next = self
             self.value = appended
 
     pass
