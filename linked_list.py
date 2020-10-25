@@ -25,8 +25,10 @@ class LinkedList:
 
     def is_empty(self):
         if self.addr != self or self.next != self or self.prev != self:
+            print("not empty")
             return False
         else:
+            print("empty")
             return True
 
     def is_last(self):
@@ -38,8 +40,12 @@ class LinkedList:
             return self;
 
     def append(self, appended):
+        print("appending")
         if self.is_empty():
+            print("appended appending")
             self.next = appended
             self.prev = appended
+            appended.prev = self
+            self.value = appended
 
     pass
