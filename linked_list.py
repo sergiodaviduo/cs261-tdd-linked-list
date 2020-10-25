@@ -40,5 +40,6 @@ class LinkedList:
     def append(self, appended):
         if self.is_empty():
             self.next = appended
+            self.prev = appended
 
     pass
