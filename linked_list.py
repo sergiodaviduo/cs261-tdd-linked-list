@@ -34,6 +34,8 @@ class LinkedList:
     def is_last(self):
         if self.is_empty():
             return True
+        elif self.prev.value == self:
+            return True
 
     def last(self):
         if self.is_empty():
