@@ -94,7 +94,15 @@ class LinkedList:
             if (n == count):
                 return headval
 
+    def search(self, val):
+        headval = self
 
+        while (headval.next.value != None):
+            if(headval.value == val):
+                return True
+            headval = headval.next
+
+        return None
 
 
 
