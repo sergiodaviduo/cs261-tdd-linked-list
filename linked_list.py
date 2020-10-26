@@ -54,6 +54,7 @@ class LinkedList:
         elif self.last() == self.prev:
             print("appending non-empty")
             self.next.next = appended
+            appended.prev = self.next
 
 
     pass
