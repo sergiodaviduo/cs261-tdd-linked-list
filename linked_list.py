@@ -99,7 +99,7 @@ class LinkedList:
 
         while (headval.next.value != None):
             if(headval.value == val):
-                return True
+                return headval
             headval = headval.next
 
         return None
