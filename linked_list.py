@@ -36,6 +36,8 @@ class LinkedList:
             return True
         elif self.prev.value == self:
             return True
+        elif self.next.value == None:
+            return True
 
     def last(self):
         if self.is_empty():
@@ -51,10 +53,17 @@ class LinkedList:
             appended.prev = self
             appended.next = self
             self.value = appended
-        elif self.last() == self.prev:
+        elif self.last() == self.prev or self.last():
             print("appending non-empty")
-            self.next.next = appended
-            appended.prev = self.next
+            self.value = None
+
+            headval = self
+
+            while(headval.next.value != None):
+                headval = headval.next
+
+            headval.next = appended
+            appended.prev = headval
             appended.next = self
             self.prev = appended
 
