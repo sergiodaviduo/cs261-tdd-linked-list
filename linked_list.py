@@ -45,12 +45,15 @@ class LinkedList:
     def append(self, appended):
         print("appending")
         if self.is_empty():
-            print("appended appending")
+            print("appending empty")
             self.next = appended
             self.prev = appended
             appended.prev = self
             appended.next = self
             self.value = appended
+        elif self.last() == self.prev:
+            print("appending non-empty")
+            self.next.next = appended
 
 
     pass
