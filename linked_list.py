@@ -74,6 +74,13 @@ class LinkedList:
         self.next.prev = repl_prev
         self.prev.next = repl_next
 
+    def insert(self, inserted):
+        old_nextnode = self.next
+        old_prevnode = self.prev
 
+        inserted.next = old_nextnode
+        inserted.prev = self
+        self.next.prev = inserted
+        self.next = inserted
 
     pass
