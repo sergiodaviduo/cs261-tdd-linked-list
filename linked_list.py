@@ -55,7 +55,8 @@ class LinkedList:
             self.value = appended
         elif self.last() == self.prev or self.last():
             print("appending non-empty")
-            self.value = None
+            if self.value != None:
+                self.value = None
 
             headval = self
 
@@ -66,6 +67,13 @@ class LinkedList:
             appended.prev = headval
             appended.next = self
             self.prev = appended
+
+    def delete(self):
+        repl_prev = self.prev
+        repl_next = self.next
+        self.next.prev = repl_prev
+        self.prev.next = repl_next
+
 
 
     pass
