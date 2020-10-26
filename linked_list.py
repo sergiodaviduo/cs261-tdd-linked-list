@@ -83,4 +83,19 @@ class LinkedList:
         self.next.prev = inserted
         self.next = inserted
 
+    def at(self, n):
+        count = 0
+
+        headval = self
+
+        while (headval.next.value != None):
+            count += 1
+            headval = headval.next
+            if (n == count):
+                return headval
+
+
+
+
+
     pass
